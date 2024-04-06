@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Novo Evento 2",
+    "details": null,
+    "maximumAttendees": null
+}
+
+###
+
+POST http://localhost:3333/events/73d9ea3b-5521-42d8-8140-6e60589f2be3/attendees
+Content-Type: application/json
+
+{
+    "name": "Matheus Lino 2",
+    "email": "matheuslinolima2@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/73d9ea3b-5521-42d8-8140-6e60589f2be3
+
+###
+
+GET http://localhost:3333/attendees/2/badge
+
+###
+
+GET http://localhost:3333/attendees/2/check-in
+
+###
+
+GET  http://localhost:3333/events/73d9ea3b-5521-42d8-8140-6e60589f2be3/attendees?query=matheus
