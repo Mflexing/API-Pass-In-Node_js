@@ -53,12 +53,6 @@ A API rodará por padrão em `http://localhost:3000`.
 ### 🔒 Protegidas (Requer Token JWT)
 - `GET /users/profile` - Obtém os dados do usuário logado.
 
-## 🏗️ Contribuição
-Sinta-se à vontade para abrir issues e enviar pull requests!
-
-## 📄 Licença
-Este projeto está sob a licença MIT. Para mais informações, consulte o arquivo `LICENSE`.
-
 ---
 Desenvolvido com 💙 por [Mflexing](https://github.com/Mflexing)
 
