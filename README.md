@@ -1,27 +1,64 @@
-pass.in:
-O pass.in é uma aplicação de gestão de participantes em eventos presenciais.
+# API Pass-In Node.js
 
-A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
+## 📌 Descrição
+A **API Pass-In** é uma API desenvolvida em **Node.js** com o objetivo de fornecer um sistema seguro de autenticação e controle de acesso. Utiliza tecnologias modernas para garantir eficiência e segurança.
 
-Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
+## 🚀 Tecnologias Utilizadas
+- **Node.js**
+- **Express**
+- **MongoDB** (Mongoose)
+- **JWT (JSON Web Token)**
+- **Bcrypt**
+- **Dotenv**
 
-O sistema fará um scan da credencial do participante para permitir a entrada no evento.
+## 📂 Estrutura do Projeto
+```
+API-Pass-In-Node_js/
+│-- src/
+│   │-- controllers/
+│   │-- models/
+│   │-- routes/
+│   │-- middlewares/
+│   │-- config/
+│   │-- server.js
+│-- .env.example
+│-- package.json
+│-- README.md
+```
 
-Requisitos funcionais:
+## 🛠️ Instalação e Uso
+### 1️⃣ Clone o repositório:
+```bash
+git clone https://github.com/Mflexing/API-Pass-In-Node_js.git
+cd API-Pass-In-Node_js
+```
+### 2️⃣ Instale as dependências:
+```bash
+npm install
+```
+### 3️⃣ Configure as variáveis de ambiente:
+Crie um arquivo `.env` baseado no `.env.example` e configure as credenciais necessárias.
 
-  organizador deve poder cadastrar um novo evento;
-  organizador deve poder visualizar dados de um evento;
-  organizador deve poser visualizar a lista de participantes;
-  participante deve poder se inscrever em um evento;
-  participante deve poder visualizar seu crachá de inscrição;
-  participante deve poder realizar check-in no evento;
+### 4️⃣ Inicie a API:
+```bash
+npm start
+```
+A API rodará por padrão em `http://localhost:3000`.
 
-Regras de negócio:
+## 🔑 Rotas Principais
+### 📝 Autenticação
+- `POST /auth/register` - Cria um novo usuário.
+- `POST /auth/login` - Faz login e retorna um token JWT.
 
-  participante só pode se inscrever em um evento uma única vez;
-  participante só pode se inscrever em eventos com vagas disponíveis;
-  participante só pode realizar check-in em um evento uma única vez;
+### 🔒 Protegidas (Requer Token JWT)
+- `GET /users/profile` - Obtém os dados do usuário logado.
 
-Requisitos não-funcionais
+## 🏗️ Contribuição
+Sinta-se à vontade para abrir issues e enviar pull requests!
 
-  O check-in no evento será realizado através de um QRCode;
+## 📄 Licença
+Este projeto está sob a licença MIT. Para mais informações, consulte o arquivo `LICENSE`.
+
+---
+Desenvolvido com 💙 por [Mflexing](https://github.com/Mflexing)
+
